@@ -11,6 +11,7 @@ $('#send').click(function(){
     callback: window.location.href, // The url to go to when the link is tapped
   });
   Omlet.exit(rdl); // Quit the app, sending the RDL
+  // see http://www.omlet.me/developers/#Supported_Types for more types
 });
 
 

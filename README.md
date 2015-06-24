@@ -1,2 +1,2 @@
 # helloworld-omlet
-A hello world app for omlet in javascript
+A hello world RDL app for omlet, see [http://www.omlet.me/developers/#Supported_Types](Supported Types) for more message types

@@ -10,19 +10,17 @@ $('#send').click(function(){
     webCallback: 'Hello World', // Something
     callback: window.location.href, // The url to go to when the link is tapped
   });
-  Omlet.exit(rdl);
+  Omlet.exit(rdl); // Quit the app, sending the RDL
 });
 
 
 Omlet.ready(function() {
   var rdlDataRaw = Omlet.getPasteboard(); // The data you sent in the RDL
-  if(rdlDataRaw){
+  if(rdlDataRaw){ // If there was any data (meaning you came here from a message)
     var rdlData = rdlDataRaw.json; // Get your data (the json) out of it
-    //RDL was tapped
     $('#send').text('Send a new hello world');
     $('#data').text(rdlData.number); // Show the random number
-  }else{
-    // User tapped from the plus button
+  }else{ // If you came here by tapping the plus button
     $('#send').click(); // Send the message
   }
 });
